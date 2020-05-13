@@ -66,7 +66,7 @@ export class Intro {
             0, - BIG_SCALE + TEXT_SHIFT, 
             -20, 0, SMALL_SCALE, SMALL_SCALE, true);
 
-        c.drawScaledText("Jani Nyk#nen", 
+        c.drawScaledText("LITTLE GEMS", 
             0, - BIG_SCALE/2 + TEXT_SHIFT, 
             -20, 0, BIG_SCALE, BIG_SCALE, true);    
     }
