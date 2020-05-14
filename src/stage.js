@@ -119,7 +119,7 @@ export class Stage {
     //
     // Is a tile solid
     //
-    isSolid(x, y, dir, egg, keys) {
+    isSolid(x, y, dir, alphabets, keys) {
 
         let s = this.solid[y * this.w + x];
         let t = this.getTile(x, y);
@@ -130,7 +130,7 @@ export class Stage {
                 return true;
         }
 
-        if (egg && s < 0)
+        if (alphabets && s < 0)
             return true;
         if (keys != null && keys > 0 &&
             t == 16) {
@@ -180,10 +180,10 @@ export class Stage {
 
                     break;
 
-                // Egg
+                // alphabets
                 case 3:
                     this.updateSolid(x, y, -1);
-                    o.createEgg(x, y);
+                    o.createalphabets(x, y);
                     break;
 
                 // Monster
