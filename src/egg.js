@@ -8,7 +8,7 @@ import { Tile } from "./stage.js";
 //
 
 
-export class Egg extends Movable {
+export class Alphabets extends Movable {
 
 
     //
@@ -98,7 +98,7 @@ export class Egg extends Movable {
     //
     // Player collision
     //
-    playerCollision(pl, eggs, o, stage) {
+    playerCollision(pl, alphabets, o, stage) {
 
         const STAR_COUNT = 5;
         const STAR_SPEED = 4.0;
@@ -110,19 +110,19 @@ export class Egg extends Movable {
             pl.pos.y == this.pos.y) {
 
             // Determine follower
-            if (eggs.length == 0) {
+            if (alphabets.length == 0) {
 
                 this.follow = pl;
             }
             else {
                 
-                eggs[eggs.length -1].follow = this;
+                alphabets[alphabets.length -1].follow = this;
                 this.follow = pl;
             }
-            eggs.push(this);
+            alphabets.push(this);
 
-            // Update player's egg count
-            ++ pl.eggCount;
+            // Update player's alphabets count
+            ++ pl.alphabetsCount;
 
             // Create stars
             o.createStarShower(
@@ -202,7 +202,7 @@ export class Egg extends Movable {
         for (let i = noOffline ? 1 : 0; i < 3; ++ i) {
 
             c.setColor( ...color[i]);
-            c.fillShape(Shape.Egg, 
+            c.fillShape(Shape.alphabets, 
                 OFF_X[i], OFF_Y[i], 
                 RADIUS + OUTLINE[i], RADIUS+ OUTLINE[i]);
         }
