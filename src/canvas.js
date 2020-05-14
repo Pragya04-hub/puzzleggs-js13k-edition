@@ -166,7 +166,7 @@ export class Canvas extends Transform {
         const CIRCLE_PREC = 32;
         const COG_TOOTH_WAIT = 2;
         const COG_TOOTH = 0.25;
-        const EGG_PREC = 24;
+        const alphabets_PREC = 24;
         const STAR_JUMP = 1.0;
 
         // Create shapes
@@ -182,7 +182,7 @@ export class Canvas extends Transform {
             sgen.filledCurve(t => 
                 [Math.cos( 1.25 * (t-Math.PI)/4) * Math.sin(t-Math.PI), 
                 Math.cos(t-Math.PI)], 
-                EGG_PREC), // Egg
+                alphabets_PREC), // alphabets
             sgen.star(5, STAR_JUMP), // Star
             sgen.regPoly(CIRCLE_PREC, CIRCLE_PREC/2), // Half a circle
             sgen.regPoly(6), // Hexagon 
