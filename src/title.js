@@ -130,11 +130,11 @@ export class TitleScreen {
         for (let j = 1; j < 5; ++ j) {
 
             c.fillStyle = "rgb(170, 85, 0)";
-            c.fillText("PUZZLEggs", x+j*2, y+j*2);
+            c.fillText("ALPHABETS", x+j*2, y+j*2);
             c.fillRect(x - 480 + j*2, y + 16+j*2, 640, 16);
         }
         c.fillStyle = "rgb(255, 255, 85)";
-        c.fillText("PUZZLEggs", x, y);
+        c.fillText("ALPHABETS", x, y);
 
         c.fillRect(x - 480, y + 16, 640, 16);
 
